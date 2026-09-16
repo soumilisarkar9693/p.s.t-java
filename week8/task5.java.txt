@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<Object> list = new ArrayList<>();
+
+        list.add(1);
+        list.add("Hello");
+        list.add("World");
+
+        Iterator<Object> iterator = list.iterator();
+
+        while (iterator.hasNext()) {
+            Object value = iterator.next();
+
+            if (value instanceof Integer) {
+                if ((Integer) value == 1) {
+                    break;
+                }
+            }
+        }
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+}
